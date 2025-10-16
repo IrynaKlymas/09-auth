@@ -1,5 +1,5 @@
 {
-  "name": "08-zustand",
+  "name": "09-auth",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,9 @@
   "dependencies": {
     "@tanstack/react-query": "^5.89.0",
     "@tanstack/react-query-devtools": "^5.89.0",
+    "@types/cookie": "^0.6.0",
     "axios": "^1.12.2",
+    "cookie": "^1.0.2",
     "formik": "^2.4.6",
     "geist": "^1.5.1",
     "next": "15.5.3",
@@ -25,7 +27,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/axios": "^0.9.36",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

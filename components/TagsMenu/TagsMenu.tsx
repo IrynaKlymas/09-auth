@@ -6,13 +6,12 @@ import css from "./TagsMenu.module.css";
 
 const TagsMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
+    const menuRef = useRef<HTMLDivElement>(null); 
     const tags = ["All", "Todo", "Work", "Personal", "Meeting", "Shopping"];
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {

@@ -28,11 +28,12 @@ export const useNoteStore = create<NoteStore>()(
             draft: initialDraft,
             setDraft: (partial) =>
                 set((state) => ({ draft: { ...state.draft, ...partial } })),
+
             clearDraft: () => set({ draft: initialDraft }),
         }),
         {
-            name: "notehub-draft", 
-            version: 1,
+            name: "notehub-draft",
+            version: 1, 
         }
     )
 );

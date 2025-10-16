@@ -9,7 +9,6 @@ interface PaginationProps {
     currentPage: number; 
 }
 
-
 const Pagination = ({
     pageCount,
     onPageChange,

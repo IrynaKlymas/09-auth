@@ -1,11 +1,10 @@
-
 "use client";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import { createNote } from "@/lib/api";
+import { createNote } from "@/lib/api/clientApi";
 import type { NoteTag } from "@/types/note";
 import { useNoteStore, DraftNote } from "@/lib/store/noteStore";
 import css from "./NoteForm.module.css";
@@ -32,11 +31,12 @@ const validateDraft = (draft: DraftNote): FormErrors => {
 
     const content = draft.content.trim();
     if (!content) {
-        errors.content = "Content is required"; 
+        errors.content = "Content is required";
     } else if (draft.content.length > 500) {
         errors.content = "Content must be at most 500 characters";
     }
 
+    // Валідація 'tag'
     if (!draft.tag) {
         errors.tag = "Tag is required";
     } else if (!TAGS.includes(draft.tag)) {

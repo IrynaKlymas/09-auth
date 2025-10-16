@@ -1,3 +1,3 @@
-08-zustand
+09-auth
 
-3. Module 3. Performance Optimization and State Management
+4. Module 4. Authentication and Security
